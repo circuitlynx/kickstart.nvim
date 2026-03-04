@@ -151,6 +151,10 @@ vim.o.confirm = true
 --  See `:help hlsearch`
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
+-- Moves to the next buffer and previous buffer
+vim.keymap.set('n', '<Tab>', '<cmd>bnext<CR>')
+vim.keymap.set('n', '<S-Tab>', '<cmd>bprev<CR>')
+
 -- Diagnostic Config & Keymaps
 -- See :help vim.diagnostic.Opts
 vim.diagnostic.config {
