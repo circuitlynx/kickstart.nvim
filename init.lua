@@ -80,6 +80,10 @@ vim.o.number = true
 --  Experiment for yourself to see if you like it!
 vim.o.relativenumber = true
 
+-- Changes the default tab width to 8.
+vim.o.shiftwidth = 8
+vim.o.tabstop = 8
+
 -- Enable mouse mode, can be useful for resizing splits for example!
 vim.o.mouse = 'a'
 
@@ -890,3 +894,32 @@ require('lazy').setup({
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
+--
+-- Jack's code for clear sidebar
+vim.api.nvim_set_hl(0, 'Normal', { bg = 'NONE' })
+vim.api.nvim_set_hl(0, 'NormalFloat', { bg = 'NONE' })
+
+local function set_transparent()
+  local groups = {
+    'Normal',
+    'NormalFloat',
+    'NormalNC',
+    'NeoTreeNormal',
+    'NeoTreeNormalNC',
+    'NeoTreeEndOfBuffer',
+    'NeoTreeFloatNormal',
+    'SignColumn',
+    'FoldColumn',
+    'StatusLine',
+    'StatusLineLC',
+  }
+  for _, group in ipairs(groups) do
+    vim.api.nvim_set_hl(0, group, { bg = 'NONE' })
+  end
+end
+
+set_transparent()
+
+vim.api.nvim_create_autocmd('ColorScheme', {
+  callback = set_transparent,
+})
