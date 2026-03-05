@@ -6,8 +6,6 @@ return {
     options = {
       icons_enabled = true,
       theme = 'tokyonight',
-      component_separators = { left = '\\', right = '/' },
-      section_separators = { left = '◣', right = '◢' },
       disabled_filetypes = {
         statusline = { 'neo-tree' },
         winbar = { 'neo-tree' },
@@ -52,7 +50,12 @@ return {
       lualine_z = {},
     },
     tabline = {
-      lualine_a = { 'buffers' },
+      lualine_a = {
+        {
+          'buffers',
+          use_mode_colors = true,
+        },
+      },
       lualine_b = {},
       lualine_c = {},
       lualine_x = {},
