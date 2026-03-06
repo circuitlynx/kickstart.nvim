@@ -1,4 +1,10 @@
---Circuit's config!
+--[[Circuit's config!
+   /\  /\
+  /( \/ )\  Meow!
+ <  0   - > /
+ / ミ W ミ\
+  /      \
+--]]
 
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
