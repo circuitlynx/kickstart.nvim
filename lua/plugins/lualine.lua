@@ -1,9 +1,12 @@
 return {
+  --        
   'nvim-lualine/lualine.nvim',
   version = '*',
   dependencies = { 'nvim-tree/nvim-web-devicons' },
   opts = {
     options = {
+      section_separators = { left = '◣', right = '◢' },
+      component_separators = { left = '\\', right = '/' },
       icons_enabled = true,
       theme = 'tokyonight',
       disabled_filetypes = {
@@ -53,6 +56,8 @@ return {
       lualine_a = {
         {
           'buffers',
+          section_separators = { left = '', right = '' },
+          component_separators = { left = '|', right = '|' },
           use_mode_colors = true,
         },
       },
