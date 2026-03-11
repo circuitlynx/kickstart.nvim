@@ -10,13 +10,9 @@ return { -- You can easily change to a different colorscheme.
     require('tokyonight').setup {
       transparent = true,
       styles = {
-        comments = { italic = false }, -- Disable italics in comments
-        sidebars = transparent,
-        floats = transparent,
+        comments = { italic = false },
       },
-      on_colors = function(colors) colors.bg_statusline = colors.none end,
     }
-
     -- Load the colorscheme here.
     -- Like many other themes, this one has different styles, and you could load
     -- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
