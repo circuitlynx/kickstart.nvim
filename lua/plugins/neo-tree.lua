@@ -11,10 +11,11 @@ return {
   },
   lazy = false,
   keys = {
-    { '\\', ':Neotree reveal<CR>', desc = 'NeoTree reveal', silent = true },
+    { '\\', ':Neotree reveal float<CR>', desc = 'NeoTree reveal float', silent = true },
   },
   opts = {
     filesystem = {
+      hijack_netrw_behavior = 'open_current',
       window = {
         mappings = {
           ['\\'] = 'close_window',

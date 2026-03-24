@@ -5,9 +5,8 @@
 --  See `:help hlsearch`
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
--- Moves to the next buffer and previous buffer
-vim.keymap.set('n', '<Tab>', '<cmd>bnext<CR>')
-vim.keymap.set('n', '<S-Tab>', '<cmd>bprev<CR>')
+-- Saves and closes
+vim.keymap.set('n', '<leader>q', '<cmd>wqa<CR>', { desc = 'Closes Neovim.' })
 
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
 -- for people to discover. Otherwise, you normally need to press <C-\><C-n>, which
@@ -33,11 +32,11 @@ vim.diagnostic.config {
   underline = { severity = vim.diagnostic.severity.ERROR },
 
   -- Can switch between these as you prefer
-  virtual_text = true, -- Text shows up at the end of the line
-  virtual_lines = false, -- Teest shows up underneath the line, with virtual lines
+  virtual_text = false, -- Text shows up at the end of\ the line
+  virtual_lines = true, -- Teest shows up underneath the line, with virtual lines
 
   -- Auto open the float, so you can easily read the errors when jumping with `[d` and `]d`
   jump = { float = true },
 }
 
-vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
+vim.keymap.set('n', '<leader>r', vim.diagnostic.setloclist, { desc = '[R]epair: Open diagnostic quickfix list' })

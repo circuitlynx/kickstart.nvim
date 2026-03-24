@@ -122,6 +122,7 @@ return {
       'stylua', -- Used to format Lua code
       -- You can add other tools here that you want Mason to install
       'clangd',
+      'fish-lsp',
     })
 
     require('mason-tool-installer').setup { ensure_installed = ensure_installed }
@@ -158,5 +159,7 @@ return {
       },
     })
     vim.lsp.enable 'lua-language-server'
+
+    vim.lsp.enable 'fish_lsp'
   end,
 }
