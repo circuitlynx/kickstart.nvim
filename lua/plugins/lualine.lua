@@ -66,6 +66,9 @@ return {
 
             component_separators = { left = '┌┘', right = '└┐' },
             use_mode_colors = true,
+            symbols = {
+              alternate_file = '',
+            },
           },
         },
         lualine_b = {},
