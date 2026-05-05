@@ -123,6 +123,7 @@ return {
       -- You can add other tools here that you want Mason to install
       'clangd',
       'fish-lsp',
+      'tinymist',
     })
 
     require('mason-tool-installer').setup { ensure_installed = ensure_installed }
@@ -161,5 +162,6 @@ return {
     vim.lsp.enable 'lua-language-server'
 
     vim.lsp.enable 'fish_lsp'
+    vim.lsp.enable 'tinymist'
   end,
 }
